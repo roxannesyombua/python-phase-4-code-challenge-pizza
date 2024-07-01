@@ -13,7 +13,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.json.compact = False
 
-migrate = Migrate(app, db)
+migrate = Migrate(app, db,render_as_batch=True)
 
 db.init_app(app)
 
